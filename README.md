@@ -1,5 +1,5 @@
 # Windows PowerShell Guides and Helpers
-- Most of the below examples will requires PowerShell run as Administrator
+- Most of the below examples require PowerShell run as Administrator
 
 ## Windows 7/8
 - Later version of Windows have removed the ability to remove hotfixes using /quiet. So this will not work with Windows 10.  
