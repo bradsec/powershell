@@ -1,8 +1,8 @@
 # Windows PowerShell Guides and Helpers
-- Most of the below examples require PowerShell run as Administrator
+Most of the below examples require PowerShell run as Administrator
 
 ## Windows 7/8
-- Later version of Windows have removed the ability to remove hotfixes using /quiet. So this will not work with Windows 10 onwards.  
+Later version of Windows have removed the ability to remove hotfixes using /quiet. So this will not work with Windows 10 onwards.  
 #### Get list of KB hotfixes
 `Get-Hotfix | Select-Object -Property HotFixID`  
 #### Get list and remove all KB hotfixes applied to system
@@ -40,12 +40,12 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
     Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
 }
 ```
-- Should return `Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists.`
+Should return `Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists.`
 
 #### To fix issue where capability fails to install (ie. cabability still shows as NotPresent)
 - Edit group policy  
 - `Computer Configuration` > `Administrative Templates` > `System`  
 - Set values in `Specify settings for optional component installation and component repair`  
-- - Enabled
-- - Download repair content and optional features directly from Windows Update instead of Windows Server Update Services (WSUS)
+   - Enabled
+   - Download repair content and optional features directly from Windows Update instead of Windows Server Update Services (WSUS)
 - Reboot system and try Add-WindowsCapability again.
