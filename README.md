@@ -2,7 +2,7 @@
 - Most of the below examples require PowerShell run as Administrator
 
 ## Windows 7/8
-- Later version of Windows have removed the ability to remove hotfixes using /quiet. So this will not work with Windows 10.  
+- Later version of Windows have removed the ability to remove hotfixes using /quiet. So this will not work with Windows 10 onwards.  
 #### Get list of KB hotfixes
 `Get-Hotfix | Select-Object -Property HotFixID`  
 #### Get list and remove all KB hotfixes applied to system
